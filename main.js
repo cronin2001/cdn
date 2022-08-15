@@ -4,7 +4,6 @@ function initShareButtons() {
 }
 function isMobile() { return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)); }
 function playM3U8(src) {
-    $('#player-tip').hide(); if ($('#player-proxy').prop('checked')) { src = src.replace(/https?:\/\//i, 'https://localhost/fetch.php/') }
     if (isMobile()) { playM3U8byNative(src); } else { playM3U8byHlsJS(src); }
 }
 function playM3U8byNative(src) {
